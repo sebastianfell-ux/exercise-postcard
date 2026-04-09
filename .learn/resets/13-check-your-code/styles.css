@@ -83,7 +83,7 @@ body {
 /* Inputs solo con línea inferior gris */
 input {
 	border: none;
-	border-bottom: 1px solid rgb(83, 82, 82);
+	border-bottom: 1px solid grey;
 	outline: none;
 	width: 100%;
 	display: block;
@@ -93,10 +93,4 @@ input {
 /* Footer */
 .postcard-footer {
 	padding: 10px 15px;
-	text-align: center;
-}
-
-button {
-	background-color: #4b5563;
-	padding: 10px;
 }
