@@ -1,30 +1,36 @@
+/* Reset general */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Fondo negro y centrado de la postcard */
 body {
 	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
 }
 
-* {
-	border: 1px dashed red;
-	min-height: 10px;
-}
-
-p {
-	color: blue;
-}
-
+/* Contenedor principal */
 .postcard {
 	background-color: white;
-	width: 400px;
-	height: 300px;
-	margin: auto;
+	width: 500px;
+	border: 2px solid black;
 }
 
+/* Header: título a la izquierda, logo a la derecha */
 .postcard-header {
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 15px;
+	border-bottom: 2px dashed red;
 }
 
 .postcard-header h1 {
-	width: 200px;
-	margin: 0;
 	font-weight: bold;
 }
 
@@ -33,23 +39,58 @@ p {
 	height: 50px;
 }
 
+/* Body dividido en dos columnas */
 .postcard-body {
-	display:flex;
+	display: flex;
+	border-bottom: 2px dashed red;
 }
 
-.body-left p:first-child {
-	margin-top: 0;
-}
-
+/* Padding compartido entre columnas */
 .body-left,
 .body-right {
 	padding: 10px;
 }
 
+/* Columna izquierda con borde separador */
+.body-left {
+	width: 50%;
+	border-right: 2px dashed red;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
 
+/* Cada párrafo tiene su propio borde rojo */
+.body-left p {
+	border: 2px dashed red;
+	padding: 8px;
+	font-size: 12px;
+}
 
+/* El primer párrafo no necesita margin-top */
+.body-left p:first-child {
+	margin-top: 0;
+}
+
+/* Columna derecha con los inputs */
+.body-right {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+/* Inputs solo con línea inferior gris */
 input {
 	border: none;
-	border-bottom: auto;
-  font-size: 10;
+	border-bottom: 1px solid grey;
+	outline: none;
+	width: 100%;
+	display: block;
+	font-size: 14px;
+}
+
+/* Footer */
+.postcard-footer {
+	padding: 10px 15px;
 }
